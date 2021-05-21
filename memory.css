@@ -1,0 +1,113 @@
+:root {
+	--image-size: 150px;
+	--square-length: 2;
+}
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+body {
+	color: black;
+	background-color: white;
+	font-size: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.time {
+	position: absolute;
+	top: 0;
+	margin: 3px auto;
+	color: white;
+	background-color: #000000aa;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px;
+	z-index: 10;
+}
+#menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+
+	background-color: rgb(0, 0, 0, 0.8);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+#menu h1 {
+	color: #2be71a;
+	font-size: 50px;
+	text-align: center;
+	margin: 25px;
+}
+#menu label {
+	color: white;
+	padding: 0 5px;
+}
+#menu select {
+	padding: 5px 10px;
+	cursor: pointer;
+}
+#menu button {
+	width: 200px;
+	margin: 30px;
+	padding: 15px;
+	border: none;
+	border-radius: 3.5px;
+	color: white;
+	background: linear-gradient(#22d122, #207c1d);
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+}
+#menu button:hover {
+	background: linear-gradient(#47e147, #2ba527);
+}
+#menu button.playagain {
+	display: none;
+	transform: scale(0.4);
+	opacity: 0;
+}
+#menu button.pop {
+	display: inline-block;
+	animation: pop 0.5s ease-in 0.3s 1 forwards;
+}
+@keyframes pop {
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+#main-container {
+	display: grid;
+	grid-template-columns: repeat(var(--square-length), 1fr);
+}
+.picture_container {
+	border: 3px solid #6d541e;
+	border-radius: 5px;
+	margin: calc(var(--image-size) * 0.07);
+	background-size: contain;
+	width: var(--image-size);
+	height: var(--image-size);
+	box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.562);
+	cursor: pointer;
+	overflow: hidden;
+}
+.close {
+	background-image: url('Images/hidden_image.jpg');
+}

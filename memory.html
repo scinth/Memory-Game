@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Memory Game</title>
+		<link rel="stylesheet" href="memory.css" />
+		<script src="memory.js"></script>
+	</head>
+	<body>
+		<main>
+			<span class="time">00:00</span>
+			<section id="menu">
+				<h1>Memory Game</h1>
+				<button class="playagain" onclick="playAgain()">Play Again</button>
+				<form name="user_settings">
+					<label for="pairs">Game Difficulty</label>
+					<select name="pairs">
+						<option value="4">Level 1</option>
+						<option value="6">Level 2</option>
+						<option value="8">Level 3</option>
+						<option value="10">Level 4</option>
+						<option value="12">Level 5</option>
+						<option value="18">Level 6</option>
+					</select>
+				</form>
+				<button class="startgame" onclick="startGame()">START</button>
+			</section>
+			<section id="main-container"></section>
+		</main>
+	</body>
+</html>
